@@ -1,0 +1,440 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 ArialMT;\f1\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs29\fsmilli14667 \cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 CREATE TABLE PLAYERS (
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 	nickname VARCHAR(20) NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 	name VARCHAR(20) NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 	surname VARCHAR(20) NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 	gender CHAR(1) NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 	birthdate DATE NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 	email VARCHAR(50) NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 	password VARCHAR(20) NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 	phonenumber INT,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 	rating INT NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 	CONSTRAINT CH_CHECK CHECK (gender IN ('F', 'M')),
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 	CONSTRAINT PLAYER_PK PRIMARY KEY (nickname));
+\f1\fs24 \
+\
+\
+
+\f0\fs29\fsmilli14667 CREATE TABLE PLAYER_HAS_TITLE (
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 	titleid INT NOT NULL,
+\f1\fs24 \
+\pard\pardeftab720\fi960\partightenfactor0
+
+\f0\fs29\fsmilli14667 \cf0 \strokec2 playerid VARCHAR(20) NOT NULL,
+\f1\fs24 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs29\fsmilli14667 \cf0 \strokec2 	CONSTRAINT PLAYER_TITLE_PK PRIMARY KEY (titleid, playerid));
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 CREATE TABLE TITLES (
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 	titleid INT NOT NULL,
+\f1\fs24 \
+\pard\pardeftab720\fi960\partightenfactor0
+
+\f0\fs29\fsmilli14667 \cf0 \strokec2 titlename VARCHAR(20) UNIQUE NOT NULL,
+\f1\fs24 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs29\fsmilli14667 \cf0 \strokec2 	CONSTRAINT TITLE_PK PRIMARY KEY (titleid));
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 CREATE TABLE CLUBS(
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 	clubid INT NOT NULL,
+\f1\fs24 \
+\pard\pardeftab720\fi960\partightenfactor0
+
+\f0\fs29\fsmilli14667 \cf0 \strokec2 clubname VARCHAR(20) UNIQUE NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 description VARCHAR(100) NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 founder VARCHAR(20) NOT NULL,
+\f1\fs24 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs29\fsmilli14667 \cf0 \strokec2 	CONSTRAINT CLUB_PK PRIMARY KEY (clubid));
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 CREATE TABLE PLAYERS_IN_CLUB(
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 	clubid INT NOT NULL,
+\f1\fs24 \
+\pard\pardeftab720\fi960\partightenfactor0
+
+\f0\fs29\fsmilli14667 \cf0 \strokec2 playerid VARCHAR(20) NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 leftdate DATE,
+\f1\fs24 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs29\fsmilli14667 \cf0 \strokec2 	CONSTRAINT PLAYERS_IN_CLUB_PK PRIMARY KEY (clubid, playerid));
+\f1\fs24 \
+\
+\
+
+\f0\fs29\fsmilli14667 CREATE TABLE TOURNAMENTS (
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0tournamentid INT NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0name VARCHAR(50),
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0idorganizer VARCHAR(20) NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0idclub INT NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0rounds INT NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0tournamentdate DATE NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0prizedescription VARCHAR(200),
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0tournamenttype VARCHAR(20) NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0idleague INT NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0CONSTRAINT TOURNAMENT_TYPE_CHECK CHECK (tournamenttype IN ('teams', 'individual')),
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0CONSTRAINT TOURNAMENT_PK PRIMARY KEY (tournamentid));
+\f1\fs24 \
+\
+\
+
+\f0\fs29\fsmilli14667 CREATE TABLE PLAYER_PLAY_TOURNAMENT (
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0idplayerintournament INT NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0tournamentid INT NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0playerid VARCHAR(20) NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0ranking INT,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0CONSTRAINT PLAYER_PLAY_TOURNAMENT_PK PRIMARY KEY (idplayerintournament),
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0CONSTRAINT PLAYER_TOURNAMENT_UNIQUE UNIQUE (tournamentid, playerid));
+\f1\fs24 \
+\
+\
+
+\f0\fs29\fsmilli14667 CREATE TABLE PLAYER_TEAM (
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0idteam INT NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0idplayerintournament INT NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0CONSTRAINT PLAYER_TEAM_PK PRIMARY KEY (idteam, idplayerintournament));
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 CREATE TABLE TEAMS (
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0idteam INT NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0idtournament INT NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0name VARCHAR(20) NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0ranking INT,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0CONSTRAINT TEAMS_PK PRIMARY KEY (idteam));
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 CREATE TABLE CHAT (
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0chatid INT NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0name VARCHAR(100) UNIQUE NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0tournamentid INT NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0CONSTRAINT CHAT_PK PRIMARY KEY (chatid));
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 CREATE TABLE PLAYER_WRITE_CHAT (
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0chatid INT NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0playerintournamentid INT NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0datetime TIMESTAMP NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0message VARCHAR(256),
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0CONSTRAINT PLAYER_WRITE_CHAT_PK PRIMARY KEY (chatid, playerintournamentid, datetime));
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 CREATE TABLE GAMES (
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0gameid INT NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0tournamentid INT NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0round INT NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0whiteplayer INT NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0blackplayer INT NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0datetime TIMESTAMP NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0result INT,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0CONSTRAINT GAMES_PK PRIMARY KEY (gameid),
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0CONSTRAINT GAMES_AK UNIQUE (tournamentid, round, whiteplayer, blackplayer));
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 CREATE TABLE LEAGUES (
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0idleague INT NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0name VARCHAR(20) UNIQUE NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0clubid INT NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0startdate DATE NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0enddate DATE NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0CONSTRAINT LEAGUES_PK PRIMARY KEY (idleague));
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 CREATE TABLE PLAYER_PLAY_LEAGUE (
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0idleague INT NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0idplayer VARCHAR(20) NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0ranking INT,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0CONSTRAINT PLAYER_PLAY_LEAGUE_PK PRIMARY KEY (idleague, idplayer));
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 CREATE TABLE REWARD (
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0rewardid INT NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0name VARCHAR(20) NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0description VARCHAR(200) NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0points INT NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0games INT NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0clubid INT NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0CONSTRAINT REWARD_PK PRIMARY KEY (rewardid));
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 CREATE TABLE PLAYER_REWARD (
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0rewardid INT NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0playerid VARCHAR(20) NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0datetime TIMESTAMP NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0CONSTRAINT PLAYER_REWARD_PK PRIMARY KEY (rewardid, playerid, datetime));
+\f1\fs24 \
+\
+\
+
+\f0\fs29\fsmilli14667 CREATE TABLE GIFT (
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0giftid INT NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0name VARCHAR(20) NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0description VARCHAR (200) NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0stock INT NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0cost INT NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0gifttype VARCHAR(20) NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0CONSTRAINT GIFT_PK PRIMARY KEY (giftid),
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0CONSTRAINT GIFTTYPE_CHECK CHECK (gifttype in ('online', 'merchandising')));
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 CREATE TABLE PLAYER_OBTAIN_GIFT (
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0giftid INT NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0playerid VARCHAR(20) NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0datetime TIMESTAMP NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0CONSTRAINT PLAYER_OBTAIN_GIFT_PK PRIMARY KEY (giftid, playerid, datetime));
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 CREATE TABLE MERCHANDISING (
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0giftid INT NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0giftsize INT NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0weight INT NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0CONSTRAINT MERCHANDISING_PK PRIMARY KEY (giftid));
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 CREATE TABLE ONLINEGIFT (
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0giftid INT NOT NULL,
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0url VARCHAR(200),
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0CONSTRAINT ONLINE_PK PRIMARY KEY (giftid));
+\f1\fs24 \
+}

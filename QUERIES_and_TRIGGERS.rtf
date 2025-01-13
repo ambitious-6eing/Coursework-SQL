@@ -1,0 +1,637 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 ArialMT;\f1\froman\fcharset0 Times-Roman;\f2\fswiss\fcharset0 Arial-BoldMT;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sa80\partightenfactor0
+
+\f0\fs56 \cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 --Queries
+\f1\fs24 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b \cf0 \strokec2 3.1 Query 1: Obtain the average number of tournaments organized for each active player in each club.
+\f1\b0 \strokec2 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0 \cf0 \strokec2 SELECT\'a0
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0playerid AS player,
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0clubname AS club,
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0ROUND(AVG(club_tournaments.tournaments_per_club), 2) AS avg_tournaments
+\f1 \strokec2 \
+
+\f0 \strokec2 FROM (
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0SELECT\'a0
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0pic.playerid,
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0pic.clubid,
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0COUNT(DISTINCT t.tournamentid) AS tournaments_per_club
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0FROM\'a0
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0PLAYERS_IN_CLUB pic
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0JOIN\'a0
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0TOURNAMENTS t ON pic.playerid = t.idorganizer
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0WHERE\'a0
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0pic.leftdate IS NULL
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0GROUP BY\'a0
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0pic.playerid, pic.clubid
+\f1 \strokec2 \
+
+\f0 \strokec2 ) club_tournaments
+\f1 \strokec2 \
+
+\f0 \strokec2 JOIN\'a0
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0PLAYERS p ON club_tournaments.playerid = p.nickname
+\f1 \strokec2 \
+
+\f0 \strokec2 JOIN\'a0
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0CLUBS c ON club_tournaments.clubid = c.clubid
+\f1 \strokec2 \
+
+\f0 \strokec2 GROUP BY\'a0
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0playerid, clubname;
+\f1 \strokec2 \
+\
+\
+\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b \cf0 \strokec2 3.2 Query 2: Get the name of the clubs, and, for each title, the title name and the number of active players with this title in the club, sorting the result by club name in alphabetical descending order.
+\f1\b0 \strokec2 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0 \cf0 \strokec2 SELECT\'a0
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0c.clubname,\'a0
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0t.titlename,\'a0
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0COUNT(DISTINCT pht.playerid) AS active_players_with_title
+\f1 \strokec2 \
+
+\f0 \strokec2 FROM\'a0
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0CLUBS c
+\f1 \strokec2 \
+
+\f0 \strokec2 JOIN\'a0
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0PLAYERS_IN_CLUB pic ON c.clubid = pic.clubid
+\f1 \strokec2 \
+
+\f0 \strokec2 JOIN\'a0
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0PLAYER_HAS_TITLE pht ON pic.playerid = pht.playerid
+\f1 \strokec2 \
+
+\f0 \strokec2 JOIN\'a0
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0TITLES t ON pht.titleid = t.titleid
+\f1 \strokec2 \
+
+\f0 \strokec2 WHERE\'a0
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0pic.leftdate IS NULL
+\f1 \strokec2 \
+
+\f0 \strokec2 GROUP BY\'a0
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0c.clubname, t.titlename
+\f1 \strokec2 \
+
+\f0 \strokec2 ORDER BY\'a0
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0c.clubname DESC;
+\f1 \strokec2 \
+\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b \cf0 \strokec2 3.3 Query 3: Obtain the number of gifts bought per player since 2021 for each type of gift.
+\f1\b0 \strokec2 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0 \cf0 \strokec2 SELECT\'a0
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0p.nickname AS player,
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0g.gifttype AS gift_type,
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0COUNT(pg.giftid) AS gifts_bought
+\f1 \strokec2 \
+
+\f0 \strokec2 FROM\'a0
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0PLAYER_OBTAIN_GIFT pg
+\f1 \strokec2 \
+
+\f0 \strokec2 JOIN\'a0
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0GIFT g ON pg.giftid = g.giftid
+\f1 \strokec2 \
+
+\f0 \strokec2 JOIN\'a0
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0PLAYERS p ON pg.playerid = p.nickname
+\f1 \strokec2 \
+
+\f0 \strokec2 WHERE\'a0
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0EXTRACT(YEAR FROM pg.datetime) >= 2021
+\f1 \strokec2 \
+
+\f0 \strokec2 GROUP BY\'a0
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0p.nickname, g.gifttype;
+\f1 \strokec2 \
+\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b \cf0 \strokec2 3.4 Query 4: Calculate the number of games won by each player in each tournament with white pieces. List the name of the tournament, the date, the name of the team, and the number of games won by each team, sorting the results by the tournament\'92s date in ascending order and by the number of games won with white pieces in descending order.
+\f1\b0 \strokec2 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0 \cf0 \strokec2 SELECT\'a0
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0t.name AS tournament_name,
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0t.tournamentdate AS tournament_date,
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0te.name AS team_name,
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0COUNT(g.gameid) AS white_wins
+\f1 \strokec2 \
+
+\f0 \strokec2 FROM\'a0
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0GAMES g
+\f1 \strokec2 \
+
+\f0 \strokec2 JOIN\'a0
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0PLAYER_PLAY_TOURNAMENT ppt ON g.whiteplayer = ppt.idplayerintournament
+\f1 \strokec2 \
+
+\f0 \strokec2 JOIN\'a0
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0TOURNAMENTS t ON g.tournamentid = t.tournamentid
+\f1 \strokec2 \
+
+\f0 \strokec2 JOIN\'a0
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0PLAYER_TEAM pt ON pt.idplayerintournament = ppt.idplayerintournament
+\f1 \strokec2 \
+
+\f0 \strokec2 JOIN\'a0
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0TEAMS te ON pt.idteam = te.idteam
+\f1 \strokec2 \
+
+\f0 \strokec2 WHERE\'a0
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0g.result = 1\'a0 -- White wins
+\f1 \strokec2 \
+
+\f0 \strokec2 GROUP BY\'a0
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0t.name, t.tournamentdate, te.name
+\f1 \strokec2 \
+\
+
+\f0 \strokec2 ORDER BY\'a0
+\f1 \strokec2 \
+
+\f0 \strokec2 \'a0\'a0\'a0\'a0t.tournamentdate ASC, white_wins DESC;
+\f1 \strokec2 \
+\
+\
+\
+\pard\pardeftab720\sa80\partightenfactor0
+
+\f0\fs56 \cf0 \strokec2 --Triggers
+\f1\fs24 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \strokec2 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa320\partightenfactor0
+\ls1\ilvl0
+\f0\fs29\fsmilli14667 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 --4.1.\'a0 When creating a club, the first one has a code 1, and the rest are assigned the following sequential number (i.e. the trigger calculates the code and assigns the code to each new club so that it is a sequential number).\
+\pard\pardeftab720\sa320\partightenfactor0
+\cf0 CREATE OR REPLACE TRIGGER trg_assign_club_code
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 BEFORE INSERT ON CLUBS
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 FOR EACH ROW
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 DECLARE
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0max_code NUMBER;
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 BEGIN
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0-- Find the highest existing code in CLUBS
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0SELECT NVL(MAX(clubid), 0) INTO max_code FROM CLUBS;
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0-- Assign the new club's code as the next sequential number
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0:NEW.clubid := max_code + 1;
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 END;
+\f1\fs24 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \strokec2 \
+\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0
+\f0\fs29\fsmilli14667 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa320\partightenfactor0
+\ls2\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 4.2.\'a0 Trigger: When registering a game, check that the black and white players are part of the club that organized (and they haven\'92t left the club).\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \strokec2 \
+\pard\pardeftab720\sa320\partightenfactor0
+
+\f0\fs29\fsmilli14667 \cf0 \strokec2 CREATE OR REPLACE TRIGGER trg_validate_club_membership
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 BEFORE INSERT ON GAMES
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 FOR EACH ROW
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 DECLARE
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0white_member_count NUMBER;
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0black_member_count NUMBER;
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 BEGIN
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0-- Check if the white player is an active member of the club
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0SELECT COUNT(*) INTO white_member_count
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0FROM PLAYERS_IN_CLUB pc
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0JOIN TOURNAMENTS t ON t.idclub = pc.clubid
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0WHERE pc.playerid = :NEW.whiteplayer
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\'a0\'a0AND pc.leftdate IS NULL
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\'a0\'a0AND t.tournamentid = :NEW.tournamentid;
+\f1\fs24 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \strokec2 \
+\pard\pardeftab720\sa320\partightenfactor0
+
+\f0\fs29\fsmilli14667 \cf0 \strokec2 \'a0\'a0\'a0\'a0-- Check if the black player is an active member of the club
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0SELECT COUNT(*) INTO black_member_count
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0FROM PLAYERS_IN_CLUB pc
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0JOIN TOURNAMENTS t ON t.idclub = pc.clubid
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0WHERE pc.playerid = :NEW.blackplayer
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\'a0\'a0AND pc.leftdate IS NULL
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\'a0\'a0AND t.tournamentid = :NEW.tournamentid;
+\f1\fs24 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \strokec2 \
+\pard\pardeftab720\sa320\partightenfactor0
+
+\f0\fs29\fsmilli14667 \cf0 \strokec2 \'a0\'a0\'a0\'a0-- Raise an error if either player is not a member or has left the club
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0IF white_member_count = 0 THEN
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0RAISE_APPLICATION_ERROR(-20001, 'The white player is not an active member of the organizing club.');
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0ELSIF black_member_count = 0 THEN
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0RAISE_APPLICATION_ERROR(-20002, 'The black player is not an active member of the organizing club.');
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0END IF;
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 END;
+\f1\fs24 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \strokec2 \
+\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa320\partightenfactor0
+\ls3\ilvl0
+\f0\fs29\fsmilli14667 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 4.3.\'a0 Trigger: Update the rating of the players\'92 game when the result of the game is registered.\
+\pard\pardeftab720\sa320\partightenfactor0
+\cf0 CREATE OR REPLACE TRIGGER trg_update_player_rating
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 AFTER INSERT ON GAMES
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 FOR EACH ROW
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 BEGIN
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0IF :NEW.result = 1 THEN
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0-- White player wins
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0UPDATE PLAYERS
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0SET rating = rating + 10
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0WHERE nickname = (SELECT playerid FROM PLAYER_PLAY_TOURNAMENT WHERE idplayerintournament = :NEW.whiteplayer);
+\f1\fs24 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \strokec2 \
+\pard\pardeftab720\sa320\partightenfactor0
+
+\f0\fs29\fsmilli14667 \cf0 \strokec2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0UPDATE PLAYERS
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0SET rating = rating - 5
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0WHERE nickname = (SELECT playerid FROM PLAYER_PLAY_TOURNAMENT WHERE idplayerintournament = :NEW.blackplayer);
+\f1\fs24 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \strokec2 \
+\pard\pardeftab720\sa320\partightenfactor0
+
+\f0\fs29\fsmilli14667 \cf0 \strokec2 \'a0\'a0\'a0\'a0ELSIF :NEW.result = 0 THEN
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0-- Black player wins
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0UPDATE PLAYERS
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0SET rating = rating + 10
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0WHERE nickname = (SELECT playerid FROM PLAYER_PLAY_TOURNAMENT WHERE idplayerintournament = :NEW.blackplayer);
+\f1\fs24 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \strokec2 \
+\pard\pardeftab720\sa320\partightenfactor0
+
+\f0\fs29\fsmilli14667 \cf0 \strokec2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0UPDATE PLAYERS
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0SET rating = rating - 5
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0WHERE nickname = (SELECT playerid FROM PLAYER_PLAY_TOURNAMENT WHERE idplayerintournament = :NEW.whiteplayer);
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0END IF;
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 END;
+\f1\fs24 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \strokec2 \
+\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls4\ilvl0
+\f0\fs29\fsmilli14667 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa320\partightenfactor0
+\ls4\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 --4.4.\'a0 Trigger: When a player buys a gift, update the player\'92s rating and the gift\'92s stock. Raise an error in case the player doesn\'92t have enough rating or the stock of the gift is 0.\
+\pard\pardeftab720\sa320\partightenfactor0
+\cf0 CREATE OR REPLACE TRIGGER trg_purchase_gift
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 BEFORE INSERT ON PLAYER_OBTAIN_GIFT
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 FOR EACH ROW
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 DECLARE
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0player_rating INT;
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0gift_stock INT;
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0gift_cost INT;
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 BEGIN
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0-- Get player's current rating
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0SELECT rating INTO player_rating
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0FROM PLAYERS
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0WHERE nickname = :NEW.playerid;
+\f1\fs24 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \strokec2 \
+\pard\pardeftab720\sa320\partightenfactor0
+
+\f0\fs29\fsmilli14667 \cf0 \strokec2 \'a0\'a0\'a0\'a0-- Get gift's current stock and cost
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0SELECT stock, cost INTO gift_stock, gift_cost
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0FROM GIFT
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0WHERE giftid = :NEW.giftid;
+\f1\fs24 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \strokec2 \
+\pard\pardeftab720\sa320\partightenfactor0
+
+\f0\fs29\fsmilli14667 \cf0 \strokec2 \'a0\'a0\'a0\'a0-- Check if player has enough rating points
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0IF player_rating < gift_cost THEN
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0RAISE_APPLICATION_ERROR(-20003, 'Insufficient rating points to purchase this gift.');
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0END IF;
+\f1\fs24 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \strokec2 \
+\pard\pardeftab720\sa320\partightenfactor0
+
+\f0\fs29\fsmilli14667 \cf0 \strokec2 \'a0\'a0\'a0\'a0-- Check if the gift is in stock
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0IF gift_stock <= 0 THEN
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0RAISE_APPLICATION_ERROR(-20004, 'Gift is out of stock.');
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0END IF;
+\f1\fs24 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \strokec2 \
+\pard\pardeftab720\sa320\partightenfactor0
+
+\f0\fs29\fsmilli14667 \cf0 \strokec2 \'a0\'a0\'a0\'a0-- Deduct the gift's cost from the player's rating
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0UPDATE PLAYERS SET rating = rating - gift_cost
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0WHERE nickname = :NEW.playerid;
+\f1\fs24 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \strokec2 \
+\pard\pardeftab720\sa320\partightenfactor0
+
+\f0\fs29\fsmilli14667 \cf0 \strokec2 \'a0\'a0\'a0\'a0-- Reduce the stock of the gift by 1
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0UPDATE GIFT SET stock = stock - 1
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0\'a0\'a0\'a0WHERE giftid = :NEW.giftid;
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 END;
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 /
+\f1\fs24 \
+}

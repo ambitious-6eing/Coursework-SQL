@@ -1,0 +1,1794 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 ArialMT;\f1\froman\fcharset0 Times-Roman;\f2\fswiss\fcharset0 Arial-BoldMT;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red16\green60\blue192;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c6667\c33333\c80000;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs29\fsmilli14667 \cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 INSERT INTO PLAYERS (nickname, name, surname, gender, birthdate, email, password, phonenumber, rating)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES ('chessMaster1', 'John', 'Doe', 'M', TO_DATE('1990-05-10', 'YYYY-MM-DD'), 'john.doe@email.com', 'password123', 1234567890, 1500);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS (nickname, name, surname, gender, birthdate, email, password, phonenumber, rating)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES ('queenBee', 'Anna', 'Smith', 'F', TO_DATE('1992-09-17', 'YYYY-MM-DD'), 'anna.smith@email.com', 'pass456', 987654321, 1500);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS (nickname, name, surname, gender, birthdate, email, password, phonenumber, rating)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES ('rookie123', 'Mike', 'Johnson', 'M', TO_DATE('1985-03-25', 'YYYY-MM-DD'), 'mike.johnson@email.com', 'chessKing', 111222333, 1300);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS (nickname, name, surname, gender, birthdate, email, password, phonenumber, rating)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES ('knightRider', 'Lisa', 'Brown', 'F', TO_DATE('1993-07-15', 'YYYY-MM-DD'), 'lisa.brown@email.com', 'horsepower', 444555666, 1450);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS (nickname, name, surname, gender, birthdate, email, password, phonenumber, rating)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES ('bishopWarrior', 'George', 'Lee', 'M', TO_DATE('1988-11-30', 'YYYY-MM-DD'), 'george.lee@email.com', 'bishop123', 777888999, 1400);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS (nickname, name, surname, gender, birthdate, email, password, phonenumber, rating)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES ('castleDefender', 'Olivia', 'Wilson', 'F', TO_DATE('1991-12-21', 'YYYY-MM-DD'), 'olivia.wilson@email.com', 'castle789', 1010101010, 1350);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS (nickname, name, surname, gender, birthdate, email, password, phonenumber, rating)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES ('pawnStorm', 'David', 'Garcia', 'M', TO_DATE('1987-08-10', 'YYYY-MM-DD'), 'david.garcia@email.com', 'stormyPawns', 2020202020, 1200);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS (nickname, name, surname, gender, birthdate, email, password, phonenumber, rating)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES ('queenOfChess', 'Emily', 'Martinez', 'F', TO_DATE('1990-06-05', 'YYYY-MM-DD'), 'emily.martinez@email.com', 'queenWins', 3030303030, 1550);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS (nickname, name, surname, gender, birthdate, email, password, phonenumber, rating)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES ('chessKing', 'James', 'Rodriguez', 'M', TO_DATE('1995-02-15', 'YYYY-MM-DD'), 'james.rodriguez@email.com', 'kingOfChess', 4040404040, 1600);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS (nickname, name, surname, gender, birthdate, email, password, phonenumber, rating)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES ('checkmate99', 'Sophia', 'Anderson', 'F', TO_DATE('1989-04-23', 'YYYY-MM-DD'), 'sophia.anderson@email.com', 'checkmate', 5050505050, 1500);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 --titles
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO TITLES (titleid, titlename) VALUES (1, 'Great Master');\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO TITLES (titleid, titlename) VALUES (2, 'International Master');\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO TITLES (titleid, titlename) VALUES (3, 'FIDE Master');\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO TITLES (titleid, titlename) VALUES (4, 'Chess Master');
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 \'96 player_has_title\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_HAS_TITLE (titleid, playerid) VALUES (1, 'chessMaster1');\'a0 -- Great Master\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_HAS_TITLE (titleid, playerid) VALUES (2, 'queenBee');\'a0 -- International Master\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_HAS_TITLE (titleid, playerid) VALUES (3, 'rookie123');\'a0 -- FIDE Master\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_HAS_TITLE (titleid, playerid) VALUES (4, 'knightRider');\'a0 -- Chess Master\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_HAS_TITLE (titleid, playerid) VALUES (2, 'bishopWarrior'); -- International Master\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_HAS_TITLE (titleid, playerid) VALUES (3, 'castleDefender');-- FIDE Master\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_HAS_TITLE (titleid, playerid) VALUES (4, 'pawnStorm');\'a0 -- Chess Master\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_HAS_TITLE (titleid, playerid) VALUES (1, 'queenOfChess');\'a0 -- Great Master\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_HAS_TITLE (titleid, playerid) VALUES (1, 'chessKing');\'a0 -- Great Master\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_HAS_TITLE (titleid, playerid) VALUES (4, 'checkmate99');\'a0 -- Chess Master
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 --Clubs
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO CLUBS (clubid, clubname, description, founder)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (1, 'Chess Warriors', 'Top Chess Club', 'chessMaster1');
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO CLUBS (clubid, clubname, description, founder)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (2, 'Queen Attackers', 'Female Champions', 'queenBee');
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO CLUBS (clubid, clubname, description, founder)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (3, 'Rook Masters', 'Rook Defense Experts', 'rookie123');
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO CLUBS (clubid, clubname, description, founder)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (4, 'Knight Riders', 'Knight Attack Enthusiasts', 'knightRider');
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO CLUBS (clubid, clubname, description, founder)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (5, 'Bishop Bashers', 'Bishop Strategy Club', 'bishopWarrior');
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO CLUBS (clubid, clubname, description, founder)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (6, 'Castle Crushers', 'Strong Defense Club', 'castleDefender');
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO CLUBS (clubid, clubname, description, founder)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (7, 'Pawn Power', 'Pawn Strategies Club', 'pawnStorm');
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO CLUBS (clubid, clubname, description, founder)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (8, 'Queens Gambit', 'Advanced Chess Openings', 'queenOfChess');
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO CLUBS (clubid, clubname, description, founder)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (9, 'Kings Court', 'Chess Master Club', 'chessKing');
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO CLUBS (clubid, clubname, description, founder)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (10, 'Checkmate Masters', 'Expert Strategists Club', 'checkmate99');
+\f1\fs24 \
+\
+\
+
+\f0\fs29\fsmilli14667 --Players_in_club
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 -- Club 1: Chess Warriors\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS_IN_CLUB (clubid, playerid, leftdate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (1, 'chessMaster1', NULL); \'a0 -- Founder
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS_IN_CLUB (clubid, playerid, leftdate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (1, 'queenBee', NULL); \'a0 \'a0 \'a0 -- Member
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS_IN_CLUB (clubid, playerid, leftdate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (1, 'rookie123', NULL);\'a0 \'a0 \'a0 -- Member
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS_IN_CLUB (clubid, playerid, leftdate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (1, 'knightRider', NULL);\'a0 \'a0 -- Member
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS_IN_CLUB (clubid, playerid, leftdate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (1, 'bishopWarrior', NULL);\'a0 -- Member
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 -- Club 2: Queen Attackers\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS_IN_CLUB (clubid, playerid, leftdate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (2, 'queenBee', NULL); \'a0 \'a0 \'a0 -- Founder
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS_IN_CLUB (clubid, playerid, leftdate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (2, 'castleDefender', NULL); -- Member
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS_IN_CLUB (clubid, playerid, leftdate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (2, 'pawnStorm', NULL);\'a0 \'a0 \'a0 -- Member
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS_IN_CLUB (clubid, playerid, leftdate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (2, 'chessKing', NULL);\'a0 \'a0 \'a0 -- Member
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS_IN_CLUB (clubid, playerid, leftdate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (2, 'queenOfChess', NULL); \'a0 -- Member
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 -- Club 3: Rook Masters\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS_IN_CLUB (clubid, playerid, leftdate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (3, 'rookie123', NULL);\'a0 \'a0 \'a0 -- Founder
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS_IN_CLUB (clubid, playerid, leftdate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (3, 'checkmate99', NULL);\'a0 \'a0 -- Member
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS_IN_CLUB (clubid, playerid, leftdate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (3, 'queenOfChess', NULL); \'a0 -- Member
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS_IN_CLUB (clubid, playerid, leftdate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (3, 'pawnStorm', NULL);\'a0 \'a0 \'a0 -- Member
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 -- Club 4: Knight Riders\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS_IN_CLUB (clubid, playerid, leftdate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (4, 'knightRider', NULL);\'a0 \'a0 -- Founder
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS_IN_CLUB (clubid, playerid, leftdate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (4, 'chessMaster1', NULL); \'a0 -- Member
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS_IN_CLUB (clubid, playerid, leftdate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (4, 'rookie123', NULL);\'a0 \'a0 \'a0 -- Member
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS_IN_CLUB (clubid, playerid, leftdate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (4, 'checkmate99', NULL);\'a0 \'a0 -- Member
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 -- Club 5: Bishop Bashers
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS_IN_CLUB (clubid, playerid, leftdate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (5, 'bishopWarrior', NULL);\'a0 -- Founder
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS_IN_CLUB (clubid, playerid, leftdate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (5, 'castleDefender', NULL); -- Member
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS_IN_CLUB (clubid, playerid, leftdate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (5, 'queenBee', NULL); \'a0 \'a0 \'a0 -- Member
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS_IN_CLUB (clubid, playerid, leftdate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (5, 'pawnStorm', NULL);\'a0 \'a0 \'a0 -- Member
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 -- Club 6: Castle Crushers\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS_IN_CLUB (clubid, playerid, leftdate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (6, 'castleDefender', NULL); -- Founder
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS_IN_CLUB (clubid, playerid, leftdate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (6, 'bishopWarrior', NULL);\'a0 -- Member
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS_IN_CLUB (clubid, playerid, leftdate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (6, 'checkmate99', NULL);\'a0 \'a0 -- Member
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS_IN_CLUB (clubid, playerid, leftdate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (6, 'queenOfChess', NULL); \'a0 -- Member
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 -- Club 7: Pawn Power
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS_IN_CLUB (clubid, playerid, leftdate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (7, 'pawnStorm', NULL);\'a0 \'a0 \'a0 -- Founder
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS_IN_CLUB (clubid, playerid, leftdate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (7, 'chessKing', NULL);\'a0 \'a0 \'a0 -- Member
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS_IN_CLUB (clubid, playerid, leftdate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (7, 'chessMaster1', NULL); \'a0 -- Member
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS_IN_CLUB (clubid, playerid, leftdate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (7, 'queenBee', NULL); \'a0 \'a0 \'a0 -- Member
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 -- Club 8: Queen's Gambit\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS_IN_CLUB (clubid, playerid, leftdate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (8, 'queenOfChess', NULL); \'a0 -- Founder
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS_IN_CLUB (clubid, playerid, leftdate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (8, 'chessKing', NULL);\'a0 \'a0 \'a0 -- Member
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS_IN_CLUB (clubid, playerid, leftdate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (8, 'checkmate99', NULL);\'a0 \'a0 -- Member
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS_IN_CLUB (clubid, playerid, leftdate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (8, 'castleDefender', NULL); -- Member
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 -- Club 9: King's Court
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS_IN_CLUB (clubid, playerid, leftdate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (9, 'chessKing', NULL);\'a0 \'a0 \'a0 -- Founder
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS_IN_CLUB (clubid, playerid, leftdate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (9, 'rookie123', NULL);\'a0 \'a0 \'a0 -- Member
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS_IN_CLUB (clubid, playerid, leftdate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (9, 'queenOfChess', NULL); \'a0 -- Member
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS_IN_CLUB (clubid, playerid, leftdate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (9, 'pawnStorm', NULL);\'a0 \'a0 \'a0 -- Member
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 -- Club 10: Checkmate Masters\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS_IN_CLUB (clubid, playerid, leftdate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (10, 'checkmate99', NULL); \'a0 -- Founder
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS_IN_CLUB (clubid, playerid, leftdate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (10, 'chessMaster1', NULL);\'a0 -- Member
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS_IN_CLUB (clubid, playerid, leftdate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (10, 'queenOfChess', NULL);\'a0 -- Member
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYERS_IN_CLUB (clubid, playerid, leftdate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (10, 'chessKing', NULL); \'a0 \'a0 -- Member
+\f1\fs24 \
+\
+\
+\
+
+\f0\fs29\fsmilli14667 -- Tournaments
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO TOURNAMENTS (tournamentid, name, idorganizer, idclub, rounds, tournamentdate, prizedescription, tournamenttype, idleague)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (1, 'Champions League', 'chessMaster1', 1, 5, TO_DATE('2024-01-10', 'YYYY-MM-DD'), '5000$ for winner', 'individual', 1);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO TOURNAMENTS (tournamentid, name, idorganizer, idclub, rounds, tournamentdate, prizedescription, tournamenttype, idleague)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (2, 'Queen Attackers Open', 'queenBee', 2, 6, TO_DATE('2024-02-20', 'YYYY-MM-DD'), '3000$ for winner', 'teams', 2);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO TOURNAMENTS (tournamentid, name, idorganizer, idclub, rounds, tournamentdate, prizedescription, tournamenttype, idleague)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (3, 'Rook Masters Challenge', 'rookie123', 3, 7, TO_DATE('2024-03-15', 'YYYY-MM-DD'), '1000$ for winner', 'individual', 3);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO TOURNAMENTS (tournamentid, name, idorganizer, idclub, rounds, tournamentdate, prizedescription, tournamenttype, idleague)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (4, 'Knight Riders Battle', 'knightRider', 4, 5, TO_DATE('2024-04-05', 'YYYY-MM-DD'), '1500$ for winner', 'individual', 4);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO TOURNAMENTS (tournamentid, name, idorganizer, idclub, rounds, tournamentdate, prizedescription, tournamenttype, idleague)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (5, 'Bishop Bash Invitational', 'bishopWarrior', 5, 5, TO_DATE('2024-05-25', 'YYYY-MM-DD'), '500$ for winner', 'individual', 5);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO TOURNAMENTS (tournamentid, name, idorganizer, idclub, rounds, tournamentdate, prizedescription, tournamenttype, idleague)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (6, 'Castle Crushers Cup', 'castleDefender', 6, 6, TO_DATE('2024-06-12', 'YYYY-MM-DD'), '2000$ for winner', 'teams', 6);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO TOURNAMENTS (tournamentid, name, idorganizer, idclub, rounds, tournamentdate, prizedescription, tournamenttype, idleague)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (7, 'Pawn Power Championship', 'pawnStorm', 7, 7, TO_DATE('2024-07-10', 'YYYY-MM-DD'), '750$ for winner', 'individual', 7);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO TOURNAMENTS (tournamentid, name, idorganizer, idclub, rounds, tournamentdate, prizedescription, tournamenttype, idleague)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (8, 'Queens Gambit Classic', 'queenOfChess', 8, 8, TO_DATE('2024-08-18', 'YYYY-MM-DD'), '4000$ for winner', 'individual', 8);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO TOURNAMENTS (tournamentid, name, idorganizer, idclub, rounds, tournamentdate, prizedescription, tournamenttype, idleague)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (9, 'Kings Court Tournament', 'chessKing', 9, 9, TO_DATE('2024-09-22', 'YYYY-MM-DD'), '6000$ for winner', 'teams', 9);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO TOURNAMENTS (tournamentid, name, idorganizer, idclub, rounds, tournamentdate, prizedescription, tournamenttype, idleague)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (10, 'Checkmate Masters Event', 'checkmate99', 10, 5, TO_DATE('2024-10-05', 'YYYY-MM-DD'), '2500$ for winner', 'individual', 10);
+\f1\fs24 \
+\
+\
+
+\f0\fs29\fsmilli14667 --Player_play_tournament
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_PLAY_TOURNAMENT (idplayerintournament, tournamentid, playerid, ranking)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (1, 1, 'chessMaster1', 1);\'a0 -- chessMaster1 won the Champions League
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_PLAY_TOURNAMENT (idplayerintournament, tournamentid, playerid, ranking)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (2, 1, 'queenBee', 2);\'a0 -- queenBee came second in the Champions League
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_PLAY_TOURNAMENT (idplayerintournament, tournamentid, playerid, ranking)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (3, 2, 'queenBee', 1);\'a0 -- queenBee won Queen Attackers Open
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_PLAY_TOURNAMENT (idplayerintournament, tournamentid, playerid, ranking)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (4, 2, 'castleDefender', 2);\'a0 -- castleDefender came second in Queen Attackers Open
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_PLAY_TOURNAMENT (idplayerintournament, tournamentid, playerid, ranking)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (5, 3, 'rookie123', 1);\'a0 -- rookie123 won Rook Masters Challenge
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_PLAY_TOURNAMENT (idplayerintournament, tournamentid, playerid, ranking)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (6, 3, 'checkmate99', 3);\'a0 -- checkmate99 participated in Rook Masters Challenge
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_PLAY_TOURNAMENT (idplayerintournament, tournamentid, playerid, ranking)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (7, 4, 'knightRider', 1);\'a0 -- knightRider won Knight Riders Battle
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_PLAY_TOURNAMENT (idplayerintournament, tournamentid, playerid, ranking)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (8, 4, 'chessMaster1', 2);\'a0 -- chessMaster1 came second in Knight Riders Battle
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_PLAY_TOURNAMENT (idplayerintournament, tournamentid, playerid, ranking)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (9, 5, 'bishopWarrior', 1);\'a0 -- bishopWarrior won Bishop Bash Invitational
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_PLAY_TOURNAMENT (idplayerintournament, tournamentid, playerid, ranking)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (10, 5, 'pawnStorm', 2);\'a0 -- pawnStorm came second in Bishop Bash Invitational
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 -- Additional Player Entries for Tournaments 1 to 5
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 -- Using the same tournament IDs but with unique `idplayerintournament`
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 -- Player 3 for Tournament 1
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_PLAY_TOURNAMENT (idplayerintournament, tournamentid, playerid, ranking)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (11, 1, 'rookie123', 3);\'a0 -- rookie123 participated in Champions League
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 -- Player 4 for Tournament 1
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_PLAY_TOURNAMENT (idplayerintournament, tournamentid, playerid, ranking)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (12, 1, 'checkmate99', 4);\'a0 -- checkmate99 participated in Champions League
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 -- Player 3 for Tournament 2
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_PLAY_TOURNAMENT (idplayerintournament, tournamentid, playerid, ranking)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (13, 2, 'bishopWarrior', 3);\'a0 -- bishopWarrior participated in Queen Attackers Open
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 -- Player 4 for Tournament 2
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_PLAY_TOURNAMENT (idplayerintournament, tournamentid, playerid, ranking)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (14, 2, 'pawnStorm', 4);\'a0 -- pawnStorm participated in Queen Attackers Open
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 -- Entry for Tournament 8
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_PLAY_TOURNAMENT (idplayerintournament, tournamentid, playerid, ranking)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (16, 8, 'queenOfChess', 1);\'a0 -- queenOfChess in Tournament 8
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 -- Entry for Tournament 9
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_PLAY_TOURNAMENT (idplayerintournament, tournamentid, playerid, ranking)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (18, 9, 'chessKing', 1);\'a0 -- chessKing in Tournament 9
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 -- Entry for Tournament 10
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_PLAY_TOURNAMENT (idplayerintournament, tournamentid, playerid, ranking)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (19, 10, 'checkmate99', 1);\'a0 -- checkmate99 in Tournament 10
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 -- Additional Entries for Tournaments 8, 9, and 10
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 -- Entry for Tournament 8
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_PLAY_TOURNAMENT (idplayerintournament, tournamentid, playerid, ranking)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (15, 8, 'pawnStorm', 2);\'a0 -- pawnStorm in Tournament 8
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 -- Entry for Tournament 9
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_PLAY_TOURNAMENT (idplayerintournament, tournamentid, playerid, ranking)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (17, 9, 'bishopWarrior', 2);\'a0 -- bishopWarrior in Tournament 9
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 -- Entry for Tournament 10
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_PLAY_TOURNAMENT (idplayerintournament, tournamentid, playerid, ranking)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (20, 10, 'queenBee', 2);\'a0 -- queenBee in Tournament 10
+\f1\fs24 \
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+
+\f0\fs29\fsmilli14667 --TEAMS
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO TEAMS (idteam, idtournament, name, ranking)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (1, 2, 'Queens Knights', 1);\'a0
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO TEAMS (idteam, idtournament, name, ranking)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (2, 2, 'Castle Defenders', 2);\'a0
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO TEAMS (idteam, idtournament, name, ranking)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (3, 6, 'Crushers United', 1);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO TEAMS (idteam, idtournament, name, ranking)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (4, 6, 'Knight Bashers', 2);\'a0
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO TEAMS (idteam, idtournament, name, ranking)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (5, 9, 'Royal Rooks', 1);\'a0\'a0
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO TEAMS (idteam, idtournament, name, ranking)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (6, 9, 'Pawn Stormers', 2);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO TEAMS (idteam, idtournament, name, ranking)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (7, 11, 'Warrior Kings', 1);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO TEAMS (idteam, idtournament, name, ranking)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (8, 11, 'Rook Protectors', 2);\'a0\'a0
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO TEAMS (idteam, idtournament, name, ranking)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (9, 12, 'Rook Masters Elite', 1);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO TEAMS (idteam, idtournament, name, ranking)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (10, 12, 'Knight Attackers', 2);\'a0\'a0
+\f1\fs24 \
+\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs29\fsmilli14667 \cf0 \strokec2 --PLAYER_TEAM
+\f1\b0\fs24 \strokec2 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs29\fsmilli14667 \cf0 INSERT INTO PLAYER_TEAM (idteam, idplayerintournament)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (1, 3);\'a0\'a0
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_TEAM (idteam, idplayerintournament)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (2, 4);\'a0\'a0
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_TEAM (idteam, idplayerintournament)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (3, 7);\'a0\'a0
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_TEAM (idteam, idplayerintournament)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (4, 8);\'a0
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_TEAM (idteam, idplayerintournament)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (5, 9);\'a0\'a0
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_TEAM (idteam, idplayerintournament)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (6, 10);\'a0
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_TEAM (idteam, idplayerintournament)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (7, 11);\'a0\'a0
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_TEAM (idteam, idplayerintournament)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (8, 12);\'a0
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_TEAM (idteam, idplayerintournament)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (9, 13);\'a0\'a0
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_TEAM (idteam, idplayerintournament)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (10, 14);\'a0\'a0
+\f1\fs24 \
+\
+\
+\
+\
+\
+\
+\
+\
+
+\f0\fs29\fsmilli14667 --CHAT
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO CHAT (chatid, name, tournamentid)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (1, 'Champions League Chat', 1);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO CHAT (chatid, name, tournamentid)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (2, 'Queen Attackers Open Chat', 2);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO CHAT (chatid, name, tournamentid)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (3, 'Rook Masters Challenge Chat', 3);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO CHAT (chatid, name, tournamentid)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (4, 'Knight Riders Battle Chat', 4);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO CHAT (chatid, name, tournamentid)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (5, 'Bishop Bash Invitational Chat', 5);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO CHAT (chatid, name, tournamentid)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (6, 'Castle Crushers Cup Chat', 6);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO CHAT (chatid, name, tournamentid)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (7, 'Pawn Power Championship Chat', 7);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO CHAT (chatid, name, tournamentid)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (8, 'Queens Gambit Classic Chat', 8);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO CHAT (chatid, name, tournamentid)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (9, 'Kings Court Tournament Chat', 9);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO CHAT (chatid, name, tournamentid)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (10, 'Checkmate Masters Event Chat', 10);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 --left to insert
+\f1\fs24 \
+\
+\
+
+\f0\fs29\fsmilli14667 --PLAYER_WRITE_CHAT
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_WRITE_CHAT (chatid, playerintournamentid, datetime, message)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (1, 1, SYSTIMESTAMP, 'Good luck to everyone!');
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_WRITE_CHAT (chatid, playerintournamentid, datetime, message)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (2, 3, SYSTIMESTAMP, 'Excited to see how this goes!');
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_WRITE_CHAT (chatid, playerintournamentid, datetime, message)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (3, 5, SYSTIMESTAMP, 'Lets bring our A-game!');
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_WRITE_CHAT (chatid, playerintournamentid, datetime, message)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (4, 7, SYSTIMESTAMP, 'The Knights are ready!');
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_WRITE_CHAT (chatid, playerintournamentid, datetime, message)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (5, 9, SYSTIMESTAMP, 'Looking forward to a great tournament!');
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_WRITE_CHAT (chatid, playerintournamentid, datetime, message)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (6, 11, SYSTIMESTAMP, 'May the best team win!');
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 -- Message from chessMaster1 in Chat for Tournament 1
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_WRITE_CHAT (chatid, playerintournamentid, datetime, message)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (7, 1, SYSTIMESTAMP, 'Pawns will dominate the board!');
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 -- Message from queenBee in Chat for Tournament 2
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_WRITE_CHAT (chatid, playerintournamentid, datetime, message)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (8, 2, SYSTIMESTAMP, 'Let\\'s make history today!');
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 -- Message from rookie123 in Chat for Tournament 3
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_WRITE_CHAT (chatid, playerintournamentid, datetime, message)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (9, 5, SYSTIMESTAMP, 'The King is here to win!');
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 -- Message from checkmate99 in Chat for Tournament 4
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_WRITE_CHAT (chatid, playerintournamentid, datetime, message)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (10, 6, SYSTIMESTAMP, 'Ready for an intense match!');
+\f1\fs24 \
+\
+\
+\
+\
+\
+
+\f0\fs29\fsmilli14667 --GAMES
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO GAMES (gameid, tournamentid, round, whiteplayer, blackplayer, datetime, result)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (1, 1, 1, 1, 2, SYSTIMESTAMP, 1);\'a0 -- chessMaster1 vs queenBee (White wins)
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO GAMES (gameid, tournamentid, round, whiteplayer, blackplayer, datetime, result)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (2, 2, 1, 3, 4, SYSTIMESTAMP, 0);\'a0 -- queenBee vs castleDefender (Black wins)
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO GAMES (gameid, tournamentid, round, whiteplayer, blackplayer, datetime, result)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (3, 3, 1, 5, 6, SYSTIMESTAMP, -1);\'a0 -- rookie123 vs checkmate99 (Draw)
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO GAMES (gameid, tournamentid, round, whiteplayer, blackplayer, datetime, result)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (4, 4, 1, 7, 8, SYSTIMESTAMP, 1);\'a0 -- knightRider vs chessMaster1 (White wins)
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO GAMES (gameid, tournamentid, round, whiteplayer, blackplayer, datetime, result)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (5, 5, 1, 9, 10, SYSTIMESTAMP, 0);\'a0 -- bishopWarrior vs pawnStorm (Black wins)
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO GAMES (gameid, tournamentid, round, whiteplayer, blackplayer, datetime, result)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (6, 6, 1, 11, 12, SYSTIMESTAMP, 1);\'a0 -- castleDefender vs knightRider (White wins)
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO GAMES (gameid, tournamentid, round, whiteplayer, blackplayer, datetime, result)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (7, 7, 1, 13, 14, SYSTIMESTAMP, 1);\'a0 -- pawnStorm vs checkmate99 (White wins)
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO GAMES (gameid, tournamentid, round, whiteplayer, blackplayer, datetime, result)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (8, 8, 1, 15, 16, SYSTIMESTAMP, -1);\'a0 -- queenOfChess vs chessKing (Draw)
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO GAMES (gameid, tournamentid, round, whiteplayer, blackplayer, datetime, result)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (9, 9, 1, 17, 18, SYSTIMESTAMP, 1);\'a0 -- chessKing vs pawnStorm (White wins)
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO GAMES (gameid, tournamentid, round, whiteplayer, blackplayer, datetime, result)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (10, 10, 1, 19, 20, SYSTIMESTAMP, 0);\'a0 -- checkmate99 vs queenBee (Black wins)
+\f1\fs24 \
+\
+\
+\
+\
+\
+\
+
+\f0\fs29\fsmilli14667 --LEAGUES
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO LEAGUES (idleague, name, clubid, startdate, enddate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (1, 'Premier League', 1, TO_DATE('2024-01-01', 'YYYY-MM-DD'), TO_DATE('2024-12-31', 'YYYY-MM-DD'));
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO LEAGUES (idleague, name, clubid, startdate, enddate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (2, 'Queen Attack League', 2, TO_DATE('2024-02-01', 'YYYY-MM-DD'), TO_DATE('2024-12-31', 'YYYY-MM-DD'));
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO LEAGUES (idleague, name, clubid, startdate, enddate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (3, 'Rook Masters League', 3, TO_DATE('2024-03-01', 'YYYY-MM-DD'), TO_DATE('2024-12-31', 'YYYY-MM-DD'));
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO LEAGUES (idleague, name, clubid, startdate, enddate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (4, 'Knight Riders League', 4, TO_DATE('2024-04-01', 'YYYY-MM-DD'), TO_DATE('2024-12-31', 'YYYY-MM-DD'));
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO LEAGUES (idleague, name, clubid, startdate, enddate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (5, 'Bishop League', 5, TO_DATE('2024-05-01', 'YYYY-MM-DD'), TO_DATE('2024-12-31', 'YYYY-MM-DD'));
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO LEAGUES (idleague, name, clubid, startdate, enddate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (6, 'Castle Crushers League', 6, TO_DATE('2024-06-01', 'YYYY-MM-DD'), TO_DATE('2024-12-31', 'YYYY-MM-DD'));
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO LEAGUES (idleague, name, clubid, startdate, enddate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (7, 'Pawn Power League', 7, TO_DATE('2024-07-01', 'YYYY-MM-DD'), TO_DATE('2024-12-31', 'YYYY-MM-DD'));
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO LEAGUES (idleague, name, clubid, startdate, enddate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (8, 'Queens Gambit League', 8, TO_DATE('2024-08-01', 'YYYY-MM-DD'), TO_DATE('2024-12-31', 'YYYY-MM-DD'));
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO LEAGUES (idleague, name, clubid, startdate, enddate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (9, 'Kings Court League', 9, TO_DATE('2024-09-01', 'YYYY-MM-DD'), TO_DATE('2024-12-31', 'YYYY-MM-DD'));
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO LEAGUES (idleague, name, clubid, startdate, enddate)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (10, 'Checkmate Masters League', 10, TO_DATE('2024-10-01', 'YYYY-MM-DD'), TO_DATE('2024-12-31', 'YYYY-MM-DD'));
+\f1\fs24 \
+\
+\
+\
+\
+\
+\
+\
+
+\f0\fs29\fsmilli14667 --PLAYER_PLAY_LEAGUE
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_PLAY_LEAGUE (idleague, idplayer, ranking)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (1, 'chessMaster1', 1);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_PLAY_LEAGUE (idleague, idplayer, ranking)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (2, 'queenBee', 2);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_PLAY_LEAGUE (idleague, idplayer, ranking)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (3, 'rookie123', 1);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_PLAY_LEAGUE (idleague, idplayer, ranking)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (4, 'knightRider', 2);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_PLAY_LEAGUE (idleague, idplayer, ranking)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (5, 'bishopWarrior', 1);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_PLAY_LEAGUE (idleague, idplayer, ranking)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (6, 'pawnStorm', 2);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_PLAY_LEAGUE (idleague, idplayer, ranking)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (7, 'chessKing', 1);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_PLAY_LEAGUE (idleague, idplayer, ranking)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (8, 'queenOfChess', 2);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_PLAY_LEAGUE (idleague, idplayer, ranking)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (9, 'checkmate99', 1);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_PLAY_LEAGUE (idleague, idplayer, ranking)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (10, 'castleDefender', 2);
+\f1\fs24 \
+\
+\
+
+\f0\fs29\fsmilli14667 --REWARD
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO REWARD (rewardid, name, description, points, games, clubid)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (1, 'Golden Trophy', 'Awarded to top player', 1000, 5, 1);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO REWARD (rewardid, name, description, points, games, clubid)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (2, 'Silver Trophy', 'Awarded to second place', 800, 4, 2);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO REWARD (rewardid, name, description, points, games, clubid)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (3, 'Bronze Trophy', 'Awarded to third place', 600, 3, 3);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO REWARD (rewardid, name, description, points, games, clubid)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (4, 'Best Opening Award', 'Best opening move', 300, 2, 4);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO REWARD (rewardid, name, description, points, games, clubid)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (5, 'Top Strategy Award', 'Achievement in strategy', 200, 1, 5);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO REWARD (rewardid, name, description, points, games, clubid)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (6, 'Player of the Month', 'Monthly award', 500, 5, 6);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO REWARD (rewardid, name, description, points, games, clubid)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (7, 'Mastery Medal', 'Top tactical player', 400, 4, 7);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO REWARD (rewardid, name, description, points, games, clubid)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (8, 'Tournament Winner', 'Victory in tournament', 1000, 6, 8);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO REWARD (rewardid, name, description, points, games, clubid)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (9, 'Chess Excellence', 'Top player of the year', 1500, 7, 9);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO REWARD (rewardid, name, description, points, games, clubid)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (10, 'Grandmaster Medal', 'Achievement in Chess Grandmaster', 2000, 8, 10);
+\f1\fs24 \
+\
+\
+
+\f0\fs29\fsmilli14667 --PLAYER_REWARD
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_REWARD (rewardid, playerid, datetime)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (1, 'chessMaster1', SYSTIMESTAMP);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_REWARD (rewardid, playerid, datetime)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (2, 'queenBee', SYSTIMESTAMP);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_REWARD (rewardid, playerid, datetime)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (3, 'rookie123', SYSTIMESTAMP);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_REWARD (rewardid, playerid, datetime)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (4, 'knightRider', SYSTIMESTAMP);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_REWARD (rewardid, playerid, datetime)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (5, 'bishopWarrior', SYSTIMESTAMP);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_REWARD (rewardid, playerid, datetime)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (6, 'castleDefender', SYSTIMESTAMP);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_REWARD (rewardid, playerid, datetime)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (7, 'pawnStorm', SYSTIMESTAMP);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_REWARD (rewardid, playerid, datetime)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (8, 'queenOfChess', SYSTIMESTAMP);
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_REWARD (rewardid, playerid, datetime)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (9, 'chessKing', SYSTIMESTAMP);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_REWARD (rewardid, playerid, datetime)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (10, 'checkmate99', SYSTIMESTAMP);
+\f1\fs24 \
+\
+\
+\
+\
+
+\f0\fs29\fsmilli14667 --GIFT
+\f1\fs24 \
+\
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO GIFT (giftid, name, description, stock, cost, gifttype)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (1, 'Online Chess Guide', 'Digital Chess Training Guide', 100, 200, 'online');
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO GIFT (giftid, name, description, stock, cost, gifttype)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (2, 'Chess Set', 'High-quality wooden chess set', 50, 500, 'merchandising');
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO GIFT (giftid, name, description, stock, cost, gifttype)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (3, 'Chess Mug', 'Custom chess-themed mug', 200, 100, 'merchandising');
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO GIFT (giftid, name, description, stock, cost, gifttype)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (4, 'Online Puzzle Pack', 'Access to exclusive chess puzzles', 300, 150, 'online');
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO GIFT (giftid, name, description, stock, cost, gifttype)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (5, 'Chess T-shirt', 'Chess Master T-shirt', 80, 250, 'merchandising');
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO GIFT (giftid, name, description, stock, cost, gifttype)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (6, 'Chess Poster', 'Custom chess poster', 40, 120, 'merchandising');
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO GIFT (giftid, name, description, stock, cost, gifttype)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (7, 'E-Book Chess Tactics', 'Chess tactics e-book', 150, 180, 'online');
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO GIFT (giftid, name, description, stock, cost, gifttype)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (8, 'Chess Cap', 'Chess-themed baseball cap', 100, 80, 'merchandising');
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO GIFT (giftid, name, description, stock, cost, gifttype)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (9, 'Puzzle Membership', 'Year-long puzzle subscription', 50, 1000, 'online');
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO GIFT (giftid, name, description, stock, cost, gifttype)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (10, 'Chess Notepad', 'Custom chess-themed notepad', 300, 50, 'merchandising');
+\f1\fs24 \
+\
+\
+\
+
+\f0\fs29\fsmilli14667 --PLAYER_OBTAIN_GIFT\'a0
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_OBTAIN_GIFT (giftid, playerid, datetime)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (1, 'chessMaster1', SYSTIMESTAMP);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_OBTAIN_GIFT (giftid, playerid, datetime)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (2, 'queenBee', SYSTIMESTAMP);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_OBTAIN_GIFT (giftid, playerid, datetime)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (3, 'rookie123', SYSTIMESTAMP);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_OBTAIN_GIFT (giftid, playerid, datetime)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (4, 'knightRider', SYSTIMESTAMP);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_OBTAIN_GIFT (giftid, playerid, datetime)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (5, 'bishopWarrior', SYSTIMESTAMP);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_OBTAIN_GIFT (giftid, playerid, datetime)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (6, 'castleDefender', SYSTIMESTAMP);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_OBTAIN_GIFT (giftid, playerid, datetime)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (7, 'pawnStorm', SYSTIMESTAMP);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_OBTAIN_GIFT (giftid, playerid, datetime)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (8, 'queenOfChess', SYSTIMESTAMP);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_OBTAIN_GIFT (giftid, playerid, datetime)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (9, 'chessKing', SYSTIMESTAMP);
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO PLAYER_OBTAIN_GIFT (giftid, playerid, datetime)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (10, 'checkmate99', SYSTIMESTAMP);
+\f1\fs24 \
+\
+\
+
+\f0\fs29\fsmilli14667 --MERCHANDISING
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO MERCHANDISING (giftid, giftsize, weight)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (2, 10, 1500);\'a0 -- Chess Set (size: 10 units, weight: 1.5 kg)
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO MERCHANDISING (giftid, giftsize, weight)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (3, 5, 300);\'a0 -- Chess Mug (size: 5 units, weight: 0.3 kg)
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO MERCHANDISING (giftid, giftsize, weight)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (5, 8, 500);\'a0 -- Chess T-shirt (size: 8 units, weight: 0.5 kg)
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO MERCHANDISING (giftid, giftsize, weight)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (6, 12, 200);\'a0 -- Chess Poster (size: 12 units, weight: 0.2 kg)
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO MERCHANDISING (giftid, giftsize, weight)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (8, 9, 100);\'a0 -- Chess Cap (size: 9 units, weight: 0.1 kg)
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO MERCHANDISING (giftid, giftsize, weight)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (10, 6, 100);\'a0 -- Chess Notepad (size: 6 units, weight: 0.1 kg)
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO MERCHANDISING (giftid, giftsize, weight)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (7, 10, 400);\'a0 -- E-Book on Chess Tactics (size: 10 units, weight: 0.4 kg)
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 -- Digital gifts with no physical weight (size set to a neutral value, weight 0)
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 INSERT INTO MERCHANDISING (giftid, giftsize, weight)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (9, 0, 0);\'a0 -- Exclusive Puzzle Membership (size: 0, weight: 0)
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO MERCHANDISING (giftid, giftsize, weight)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (4, 0, 0);\'a0 -- Online Puzzle Pack (size: 0, weight: 0)
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO MERCHANDISING (giftid, giftsize, weight)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (1, 0, 0);\'a0 -- Online Chess Guide (size: 0, weight: 0)
+\f1\fs24 \
+\
+\
+\
+\
+\
+\
+
+\f0\fs29\fsmilli14667 --ONLINEGIFT
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO ONLINEGIFT (giftid, url)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (1, '{\field{\*\fldinst{HYPERLINK "https://chessonlineguide.com/"}}{\fldrslt \cf3 \ul \ulc3 \strokec3 https://chessonlineguide.com}}');
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO ONLINEGIFT (giftid, url)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (4, '{\field{\*\fldinst{HYPERLINK "https://chesspuzzles.com/"}}{\fldrslt \cf3 \ul \ulc3 \strokec3 https://chesspuzzles.com}}');
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO ONLINEGIFT (giftid, url)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (7, '{\field{\*\fldinst{HYPERLINK "https://chessebook.com/"}}{\fldrslt \cf3 \ul \ulc3 \strokec3 https://chessebook.com}}');
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO ONLINEGIFT (giftid, url)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (9, '{\field{\*\fldinst{HYPERLINK "https://exclusivechesspuzzles.com/"}}{\fldrslt \cf3 \ul \ulc3 \strokec3 https://exclusivechesspuzzles.com}}');
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO ONLINEGIFT (giftid, url)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (6, '{\field{\*\fldinst{HYPERLINK "https://chessposterstore.com/"}}{\fldrslt \cf3 \ul \ulc3 \strokec3 https://chessposterstore.com}}');
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO ONLINEGIFT (giftid, url)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (3, '{\field{\*\fldinst{HYPERLINK "https://chessmugs.com/"}}{\fldrslt \cf3 \ul \ulc3 \strokec3 https://chessmugs.com}}');
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO ONLINEGIFT (giftid, url)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (2, '{\field{\*\fldinst{HYPERLINK "https://woodenchesssets.com/"}}{\fldrslt \cf3 \ul \ulc3 \strokec3 https://woodenchesssets.com}}');
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO ONLINEGIFT (giftid, url)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (8, '{\field{\*\fldinst{HYPERLINK "https://chesscaps.com/"}}{\fldrslt \cf3 \ul \ulc3 \strokec3 https://chesscaps.com}}');
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO ONLINEGIFT (giftid, url)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (10, '{\field{\*\fldinst{HYPERLINK "https://chessnotepads.com/"}}{\fldrslt \cf3 \ul \ulc3 \strokec3 https://chessnotepads.com}}');\'a0
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 INSERT INTO ONLINEGIFT (giftid, url)\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 VALUES (5, '{\field{\*\fldinst{HYPERLINK "https://chesstshirts.com/"}}{\fldrslt \cf3 \ul \ulc3 \strokec3 https://chesstshirts.com}}');
+\f1\fs24 \
+}
